@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>(주)솔티넷</title>
+    <link>http://www.solty.co.kr/</link>
+    <description>콜센터 구축 전문팀</description>
+    <item>
+      <title>(주)솔티넷</title>
+      <link>http://www.example.com/index.html</link>
+      <description>콜센터 구축 전문팀</description>
+      <pubDate>2022-10-04T14:24:51+00:00</pubDate>
+      <guid>http://www.solty.co.kr/index.html</guid>
+    </item>
+  </channel>
+</rss>
