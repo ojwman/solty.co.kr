@@ -4,11 +4,11 @@
 <title>솔티넷</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords" content="솔티넷,콜센터,구축,전문팀">
-<meta name="description" content="콜센터 구축 전문팀">
+<meta name="keywords" content="솔티넷,CRM,solution,solutions">
+<meta name="description" content="We provide a comprehensive CRM solutions.">
 <meta property="og:type" content="website"> 
 <meta property="og:title" content="솔티넷">
-<meta property="og:description" content="콜센터 구축 전문팀">
+<meta property="og:description" content="We provide a comprehensive CRM solutions.">
 <meta property="og:image" content="./images/soltynet_black.jpg" />
 <meta property="og:url" content="http://www.solty.co.kr">
 <meta name="naver-site-verification" content="66db2cd36f99cfeace79dc9e86065cbd31a637fd" />
@@ -18,139 +18,76 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  .border-1px-solid {
-    border: 1px solid;
-  }
-  .text-overflow-ellipsis {
-    white-space:nowrap; text-overflow:ellipsis; overflow:hidden;
-  }
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://www.w3schools.com/w3images/mac.jpg");
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
 </style>
 </head>
 <body>
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Solty</b>net</a>
-    <!-- Float links to the right. Hide them on small screens -->
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="./index.html" class="w3-bar-item w3-button w3-wide">Soltynet</a>
+    <!-- Right-sided navbar links -->
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">About</a>
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="./about.html" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="./work.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+      <a href="./contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
     </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 </div>
 
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="./about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="./work.html" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="./contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">We make CRM solutions.</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
+    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
+    <p><a href="./about.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div>
 </header>
+ 
+<script>
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
 
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding-32" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>솔티넷은 각 분야에 특화된 개발자들이 모인 콜센터 구축 전문팀입니다.
-    </p>
-  </div>
-
-  <div class="w3-row-padding w3-grayscale">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <h3>강민구</h3>
-      <p class="w3-opacity">팀장 & 개발자</p>
-      <p>CTI 특화</p>
-      <p><button class="w3-button w3-light-grey w3-block"><a target="_blank" href="mailto:mg.kang@solty.co.kr">mg.kang@solty.co.kr</a></button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <h3>이정원</h3>
-      <p class="w3-opacity">개발자</p>
-      <p>Java & JavaScript 특화</p>
-      <p><button class="w3-button w3-light-grey w3-block"><a target="_blank" href="mailto:jw.lee@solty.co.kr">jw.lee@solty.co.kr</a></button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <h3>오재원</h3>
-      <p class="w3-opacity">개발자</p>
-      <p>SQL 특화</p>
-      <p><button class="w3-button w3-light-grey w3-block"><a target="_blank" href="mailto:jw.oh@solty.co.kr">jw.oh@solty.co.kr</a></button></p>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <h3>이소미</h3>
-      <p class="w3-opacity">개발자</p>
-      <p>HTML & CSS 특화</p>
-      <p><button class="w3-button w3-light-grey w3-block"><a target="_blank" href="mailto:sm.lee@solty.co.kr">sm.lee@solty.co.kr</a></button></p>
-    </div>
-  </div>
-    
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container border-1px-solid">
-        <div class="w3-black w3-padding text-overflow-ellipsis">콜센터, 2019.11~2020.03</div>
-        <img src="./images/IBK.jpg" alt="IBK" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container border-1px-solid">
-        <div class="w3-black w3-padding text-overflow-ellipsis">관제센터, 2020.04~2020.11</div>
-        <img src="./images/TNS.jpg" alt="TNS" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container border-1px-solid">
-        <div class="w3-black w3-padding text-overflow-ellipsis">콜센터, 2020.12~2021.05</div>
-        <img src="./images/HANA.jpg" alt="HANA" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container border-1px-solid">
-        <div class="w3-black w3-padding text-overflow-ellipsis">TM센터, 2021.06~2022.01</div>
-        <img src="./images/MG.jpg" alt="MG" style="width:100%">
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container border-1px-solid">
-        <div class="w3-black w3-padding text-overflow-ellipsis">소비자보호센터, 2022.02~2022.07</div>
-        <img src="./images/KB.jpg" alt="KB" style="width:99%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container border-1px-solid">
-        <div class="w3-black w3-padding text-overflow-ellipsis">콜센터, 2022.08~현재</div>
-        <img src="./images/NH.jpg" alt="NH" style="width:99%">
-      </div>
-    </div>
-  </div>
-
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-32" id="contact">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
-    <p>프로젝트 문의를 부탁드립니다.</p>
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> 서울특별시 영등포구 양평로 24, 5층 501호</p>
-    <!--p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> +00 151515</p-->
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> mg.kang@solty.co.kr</p>
-  </div>
-  
-<!-- Image of location/map -->
-<div class="w3-container">
-  <!--img src="/w3images/map.jpg" class="w3-image" style="width:100%"-->
-</div>
-
-<!-- End page content -->
-</div>
-
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-</footer>
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+</script>
 
 </body>
 </html>
