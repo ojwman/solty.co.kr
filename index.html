@@ -14,87 +14,215 @@
 <meta name="naver-site-verification" content="66db2cd36f99cfeace79dc9e86065cbd31a637fd" />
 <link rel="shortcut icon" href="http://www.solty.co.kr/favicon.ico">
 <link rel="canonical" href="http://www.solty.co.kr/index.html">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel="stylesheet">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-body, html {
-  height: 100%;
-  line-height: 1.8;
+body {
+    /*background-color: red;*/
+    font-family: 'Nanum Gothic', sans-serif;
 }
-
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("https://www.w3schools.com/w3images/mac.jpg");
-  min-height: 100%;
+body::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://cdn.pixabay.com/photo/2021/02/12/16/35/forget-me-not-6009034_1280.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-filter: blur(25px); 
+    -moz-filter: blur(25px);
+    -o-filter: blur(25px);
+    -ms-filter: blur(25px);
+    filter: blur(25px);
+    z-index: -1; 
+    content: "";
 }
-
-.w3-bar .w3-button {
-  padding: 16px;
+/*#logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}
+#menu {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: black;
+}*/
+#header {
+    width: 100%;
+    max-width:1280px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+#logo {
+    margin-left: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+/* #menu {
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+} */
+#footer {
+    width: 100%;
+    max-width:1280px;
+    height: 50px;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    /*text-align: center;
+    font-size: 3em;*/
+    display: flex;
+}
+#footer-first {
+    flex:1;
+    width:30%;
+    text-align: left;
+    font-size: 2em;
+}
+#footer-second{
+    flex:1;
+    width:30%;
+    text-align: center;
+    font-size: 2em;
+}
+#footer-third{
+    flex:1;
+    width:30%;
+    text-align: right;
+    font-size: 2em;
+}
+.content-container {
+    margin: 0 auto;
+    width: 100%;
+    max-width:1280px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-child {
+}
+.font-style-1 {
+    -webkit-text-stroke-color: #222;
+    -webkit-text-stroke-width: thin;
+    color: transparent;
+    font-size: 5em;
+}
+.font-style-2 {
+    font-size: 5em;
+}
+.font-style-3 {
+    font-size: 3em;
+}
+.font-style-4 {
+    -webkit-text-stroke-color: #222;
+    -webkit-text-stroke-width: thin;
+    color: transparent;
+    font-size: 3em;
 }
 </style>
 </head>
 <body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="./index.html" class="w3-bar-item w3-button w3-wide">Soltynet</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="./about.html" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="./work.html" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <a href="./contact.html" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    <div id="header">
+        <div style="float: left;">
+            <div id="logo"></div>
+        </div>
+        <!-- <div style="float: right;">
+            <div id="menu"></div>
+        </div> -->
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+    <div id="container">
+        <div data-anchor="Page 1">
+            <div class="content-container">
+                <div class="content-child">
+                    <span class="font-style-1">당신의 솔루션에</span><br />
+                    <span class="font-style-2">소금을 치다</span><br />
+                    <span class="font-style-2">솔티넷</span>
+                </div>
+            </div>
+        </div>
+        <div data-anchor="Page 2">
+            <div class="content-container">
+                <div class="content-child">
+                    <span class="font-style-1">우리는 구축했습니다</span><br /><br />
+                    <ul class="font-style-3" style="margin: 0;line-height: 1.5em;">
+                        <li>국민건강보험공단 VOC 구축</li>
+                        <li>농협은행 신탁화상 대응 개발</li>
+                        <li>KB카드 VOC 구축</li>
+                        <li>MG새마을금고 TM 구축</li>
+                        <li>하나손해보험 콜센터 구축</li>
+                        <li>효성TNS ATM관제 구축</li>
+                        <li>IBK기업은행 비대면 대응 개발</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div data-anchor="Page 3">
+            <div class="content-container">
+                <div class="content-child">
+                    <span class="font-style-1">우리는 구축합니다</span><br /><br />
+                    <span class="font-style-4">mail</span><br />
+                    <span class="font-style-3">mg.kang@solty.co.kr</span><br /><br />
+                    <span class="font-style-4">phone</span><br />
+                    <span class="font-style-3">010-7379-0627</span><br /><br />
+                    <span class="font-style-4">address</span><br />
+                    <span class="font-style-3">서울 영등포구 양평로 24</span><br />
+                    <span class="font-style-3">수정빌딩 5층 501호</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
+    <div id="footer">
+        <div id="footer-first"></div>
+        <div id="footer-second">⬇</div>
+        <div id="footer-third">1/3</div>
+    </div>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="./about.html" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="./work.html" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="./contact.html" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
+    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
+    <script>
+var page = new Pageable("#container", {
+    pips: false,
+    onUpdate: function(data) {
+        //console.log(data);
 
-<!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-left w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">We make CRM solutions.</span><br>
-    <span class="w3-xxlarge w3-hide-large w3-hide-medium">
-We make CRM solutions.
-</span><br>
-    <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-    <p><a href="./about.html" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
-  </div>
-</header>
- 
-<script>
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+        setFooter(data.index);
+    },
+    onFinish: function(data) {
+        //console.log(data);
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
+        setFooter(data.index);
+    }
+});
+
+function setFooter(index) {
+    var textSecond = "⬇";
+    if(index == 2) {
+        textSecond = "⬆";
+    }
+    var footerSecond = document.getElementById("footer-second");
+    footerSecond.innerText = textSecond;
+
+    var textThird = "{index}/3".replace("{index}", String(index + 1));
+    var footerThrid = document.getElementById("footer-third");
+    footerThrid.innerText = textThird;
 }
-
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
-
+    </script>
 </body>
 </html>
