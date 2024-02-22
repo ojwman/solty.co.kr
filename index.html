@@ -14,7 +14,6 @@
 <meta name="naver-site-verification" content="66db2cd36f99cfeace79dc9e86065cbd31a637fd" />
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="canonical" href="http://www.solty.co.kr/index.html">
-<link rel="stylesheet" type="text/css" href="https://unpkg.com/pageable@latest/dist/pageable.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&display=swap" rel="stylesheet">
@@ -39,73 +38,6 @@ body::before {
     filter: blur(25px);
     z-index: -1; 
     content: "";
-}
-/*#logo {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: black;
-}
-#menu {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: black;
-}*/
-#header {
-    width: 100%;
-    max-width:1280px;
-    height: 50px;
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-}
-#logo {
-    margin-left: 15px;
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    display: none;
-}
-/* #menu {
-    margin-right: 15px;
-    width: 50px;
-    height: 50px;
-    background-color: black;
-} */
-#footer {
-    width: 100%;
-    max-width:1280px;
-    height: 100px;
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    display: flex;
-}
-#footer-first {
-    flex:1;
-    width:30%;
-    text-align: left;
-    font-size: 5vw;
-}
-#footer-second{
-    flex:1;
-    width:30%;
-    text-align: center;
-    font-size: 5vw;
-}
-#footer-third{
-    flex:1;
-    width:30%;
-    text-align: right;
-    font-size: 5vw;
-    padding-right: 15px;
 }
 .content-container {
     margin: 0 auto;
@@ -139,44 +71,9 @@ body::before {
     </style>
 </head>
 <body>
-    <div id="header">
-        <div style="float: left;">
-            <div id="logo"></div>
-        </div>
-        <!-- <div style="float: right;">
-            <div id="menu"></div>
-        </div> -->
-    </div>
-    <div id="container">
-        <div data-anchor="Page 1">
             <div class="content-container">
                 <div class="content-child">
-                    <span class="font-style-1">CRM 프로그램</span><br />
-                    <span class="font-style-1">구축 전문팀</span><br />
-                    <span class="font-style-2">솔티넷</span>
-                </div>
-            </div>
-        </div>
-        <div data-anchor="Page 2">
-            <div class="content-container">
-                <div class="content-child">
-                    <span class="font-style-1">우리는 구축했습니다</span><br /><br />
-                    <ul class="font-style-3" style="margin: 0;line-height: 1.5em;">
-                        <li>국민건강보험공단 VOC 구축</li>
-                        <li>농협은행 신탁화상 대응 개발</li>
-                        <li>KB카드 VOC 구축</li>
-                        <li>MG새마을금고 TM 구축</li>
-                        <li>하나손해보험 콜센터 구축</li>
-                        <li>효성TNS ATM관제 구축</li>
-                        <li>IBK기업은행 비대면 대응 개발</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div data-anchor="Page 3">
-            <div class="content-container">
-                <div class="content-child">
-                    <span class="font-style-1">우리는 구축합니다</span><br /><br />
+                    <span class="font-style-1">콜센터 SI 전문 팀, 솔티넷</span><br /><br />
                     <span class="font-style-4">mail</span><br />
                     <span class="font-style-3">mg.kang@solty.co.kr</span><br /><br />
                     <span class="font-style-4">phone</span><br />
@@ -187,42 +84,5 @@ body::before {
                 </div>
             </div>
         </div>
-    </div>
-
-    <div id="footer">
-        <div id="footer-first"></div>
-        <div id="footer-second">⬇</div>
-        <div id="footer-third">1/3</div>
-    </div>
-
-    <script src="https://unpkg.com/pageable@latest/dist/pageable.min.js"></script>
-    <script>
-var page = new Pageable("#container", {
-    pips: false,
-    onUpdate: function(data) {
-        //console.log(data);
-
-        setFooter(data.index);
-    },
-    onFinish: function(data) {
-        //console.log(data);
-
-        setFooter(data.index);
-    }
-});
-
-function setFooter(index) {
-    var textSecond = "⬇";
-    if(index == 2) {
-        textSecond = "⬆";
-    }
-    var footerSecond = document.getElementById("footer-second");
-    footerSecond.innerText = textSecond;
-
-    var textThird = "{index}/3".replace("{index}", String(index + 1));
-    var footerThrid = document.getElementById("footer-third");
-    footerThrid.innerText = textThird;
-}
-    </script>
 </body>
 </html>
